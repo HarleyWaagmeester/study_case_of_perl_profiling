@@ -3,7 +3,7 @@
 # A profiling study of perl code using the profiler 'Devel-NYTProf-6.02' from CPAN.
 
 # Requirements:
-#               aplog2.pl, the program that analyzes access.log and is the target of this profiling study
+#               aplog2.pl, the target of this profiling study, a program that analyzes an httpd server access.log 
 #               perl
 #               Devel-NYTProf-6.02 from CPAN
 #               firefox or chrome
