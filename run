@@ -1,7 +1,13 @@
 #!/bin/bash
 
-# Configuration:
+# Requirements:
+#               perl
+#               Devel-NYTProf-6.02 from CPAN
+#               firefox or chrome
+#               an apache2 or nginx access.log to work with
 
+
+# Configuration:
 
 # use chrome or firefox to view the outputs
 #VIEWER=/home/sy/bin/html-viewer;
