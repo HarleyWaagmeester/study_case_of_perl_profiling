@@ -1,0 +1,7 @@
+main::ip_sorter_candidate_002;main::CORE:sort 2529
+main::ip_sorter_candidate_002;main::CORE:subst 12999
+main::CORE:match 21093
+main::CORE:readline 6222
+main::ip_sorter_candidate_002;main::CORE:print 40
+main::CORE:print 288
+main::ip_sorter_candidate_002 29470

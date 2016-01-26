@@ -1,0 +1,6 @@
+main::CORE:match	href=aplog2-pl-1-line.html#main__CORE_match
+main::CORE:subst	href=aplog2-pl-1-line.html#main__CORE_subst
+main::CORE:sort	href=aplog2-pl-1-line.html#main__CORE_sort
+main::ip_sorter_candidate_002	href=aplog2-pl-1-line.html#120
+main::CORE:print	href=aplog2-pl-1-line.html#main__CORE_print
+main::CORE:readline	href=aplog2-pl-1-line.html#main__CORE_readline

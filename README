@@ -1,0 +1,1 @@
+cat access.log | perl -d:NYTProf ./aplog2.pl candidate_002 >aaa.html;/home/sy/bin/html-viewer file:///home/sy/GIT/PERL/aplog2/aaa.html 2>/dev/null

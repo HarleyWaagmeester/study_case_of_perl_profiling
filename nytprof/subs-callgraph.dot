@@ -1,0 +1,20 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_main {
+	label="main";
+	"main::CORE:readline";
+	"main::ip_sorter_candidate_002";
+	"main::CORE:print";
+	"main::CORE:match";
+	"main::CORE:subst";
+	"main::CORE:sort";
+	"main::RUNTIME";
+}
+"main::ip_sorter_candidate_002" -> "main::CORE:sort";
+"main::RUNTIME" -> "main::CORE:readline";
+"main::RUNTIME" -> "main::CORE:match";
+"main::ip_sorter_candidate_002" -> "main::CORE:subst";
+"main::RUNTIME" -> "main::CORE:print";
+"main::ip_sorter_candidate_002" -> "main::CORE:print";
+"main::RUNTIME" -> "main::ip_sorter_candidate_002";
+}

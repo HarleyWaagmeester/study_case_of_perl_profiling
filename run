@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Configuration:
+
+
+# use chrome or firefox to view the outputs
+#VIEWER=/home/sy/bin/html-viewer;
+BROWSER=/opt/google/chrome/chrome;
+
+# The apache2 or nginx access.log file.
+SERVER_LOG=access.log
+
+# ./aplog2.pl creates the aplog2_out.html file
+OUTFILE=/home/sy/GIT/PERL/aplog2/aplog2_out.html;
+
+# The 'perl -d:NYTProf' portion of the executed command creates the nytprof.out execution profile information.
+NYTFILE=/home/sy/GIT/PERL/aplog2/nytprof.out;
+
+# The nytprofhtml program produces the html presentation from the execution profile information.
+NYTPROFHTML=/usr/local/bin/nytprofhtml;
+
+# The nytprofhtml program html presentation index file.
+NYTINDEX=/home/sy/GIT/PERL/aplog2/nytprof/index.html
+
+# Checks for dependencies
+kit_check() {
+    [ -x $NYTPROFHTML ]  ||  { echo ERROR: nytprofhtml program not found, exiting script; exit; }
+    [ -x $BROWSER ]      ||  { echo ERROR: browser $BROWSER not found, exiting script; exit; }
+    [ -r $SERVER_LOG ]   ||  { echo ERROR: file $SERVER_LOG not found, exiting script; exit; }
+}
+
+# Do a check for dependencies
+kit_check;
+
+
+#/////////////// The command that is executed. //////////////////////////////////////////////////
+
+cat $SERVER_LOG | perl -d:NYTProf ./aplog2.pl candidate_002   >  $OUTFILE;
+
+#////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Create the html presentation.
+$NYTPROFHTML $NYTFILE
+
+# View the aplog2.pl output and the nytprof html presentation.
+$BROWSER file://$OUTFILE file://$NYTINDEX 2>/dev/null
+
+
+
+
