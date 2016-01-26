@@ -1,11 +1,13 @@
 #!/bin/bash
 
+# A profiling study of perl code using the profiler 'Devel-NYTProf-6.02' from CPAN.
+
 # Requirements:
+#               aplog2.pl, the program that analyzes access.log and is the target of this profiling study
 #               perl
 #               Devel-NYTProf-6.02 from CPAN
 #               firefox or chrome
 #               an apache2 or nginx access.log to work with
-
 
 # Configuration:
 
