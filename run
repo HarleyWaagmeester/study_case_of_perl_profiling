@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# A profiling study of perl code using the profiler 'Devel-NYTProf-6.02' from CPAN.
+# A study of profiling perl code using the profiler 'Devel-NYTProf-6.02' from CPAN.
 
-# Requirements:
+#1 Requirements:
 #               aplog2.pl, the target of this profiling study, a program that analyzes an httpd server access.log 
 #               perl
 #               Devel-NYTProf-6.02 from CPAN
